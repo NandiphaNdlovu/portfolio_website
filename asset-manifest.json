@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/portfolio_website/static/css/main.d40d9d13.css",
+    "main.js": "/portfolio_website/static/js/main.a82ced01.js",
+    "static/js/787.749b4a44.chunk.js": "/portfolio_website/static/js/787.749b4a44.chunk.js",
+    "static/media/banner-bg.png": "/portfolio_website/static/media/banner-bg.cc1273af450504afe755.png",
+    "static/media/Wave.svg": "/portfolio_website/static/media/Wave.1671a8b59c99b640c18434c20240832b.svg",
+    "static/media/CentraNo2-Bold.ttf": "/portfolio_website/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/portfolio_website/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/portfolio_website/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/footer-bg.png": "/portfolio_website/static/media/footer-bg.7bd67c0f73571d0acc02.png",
+    "static/media/06384_BUBBLEGU.ttf": "/portfolio_website/static/media/06384_BUBBLEGU.456289ed311e4a6f2e48.ttf",
+    "static/media/SimpleIconsMicrosoftsqlserver.svg": "/portfolio_website/static/media/SimpleIconsMicrosoftsqlserver.98f0c0ccfb4a174d7b836f3b48294615.svg",
+    "static/media/LogosNodejs.svg": "/portfolio_website/static/media/LogosNodejs.22c72157ad22557b644bc98800ce1053.svg",
+    "static/media/LogosReact.svg": "/portfolio_website/static/media/LogosReact.dd1e4871f0b3d6efa2f3e244ba5f5a7b.svg",
+    "static/media/TwemojiCoral.svg": "/portfolio_website/static/media/TwemojiCoral.d42e4af7233c0c3ddb181fc487748dc2.svg",
+    "static/media/VscodeIconsFileTypeDelphi.svg": "/portfolio_website/static/media/VscodeIconsFileTypeDelphi.b0a3bfad2a2a833bc7aa909af3e2bc83.svg",
+    "static/media/LogosJupyter.svg": "/portfolio_website/static/media/LogosJupyter.7b2c73eeb5a8417cf64d9170f8d80f45.svg",
+    "static/media/logo.svg": "/portfolio_website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/LogosVisualStudioCode.svg": "/portfolio_website/static/media/LogosVisualStudioCode.00ba15e816606ac45cc8f60342bbc44d.svg",
+    "static/media/LogosVisualStudio.svg": "/portfolio_website/static/media/LogosVisualStudio.3a48fc468138c620b7d1b42e29764bb8.svg",
+    "static/media/LogosPython.svg": "/portfolio_website/static/media/LogosPython.9418ff8b95e9b2f5e65c204fcb7f13ca.svg",
+    "static/media/DeviconCsharp.svg": "/portfolio_website/static/media/DeviconCsharp.b3815148cc9b5cc13c96f082a21f9ce3.svg",
+    "static/media/LogosJavascript.svg": "/portfolio_website/static/media/LogosJavascript.04928323a43dd84587f0b826f600df45.svg",
+    "static/media/DeviconCss3.svg": "/portfolio_website/static/media/DeviconCss3.ffb1f4ee759fad5d693e134795167f56.svg",
+    "index.html": "/portfolio_website/index.html",
+    "static/media/nav-icon2.svg": "/portfolio_website/static/media/nav-icon2.8d5480b0e749448f666b29e89080408d.svg",
+    "static/media/nav-icon1.svg": "/portfolio_website/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
+    "static/media/DeviconHtml5.svg": "/portfolio_website/static/media/DeviconHtml5.c83c5a16fbdf04fd6fe95628adbe60ff.svg",
+    "static/media/LogosPytorchIcon.svg": "/portfolio_website/static/media/LogosPytorchIcon.c3ea759cb61bb61d0128983d54c4633c.svg",
+    "static/media/nav-icon3.svg": "/portfolio_website/static/media/nav-icon3.c579def1fc1ab625b8afb54db1d0ab03.svg",
+    "static/media/DeviconWindows8.svg": "/portfolio_website/static/media/DeviconWindows8.b7d329b3a8b06e07ea8cdee121736a97.svg",
+    "static/media/MdiMinecraft.svg": "/portfolio_website/static/media/MdiMinecraft.ad12ae4ae045690a9a0f63739b3ab475.svg",
+    "static/media/TablerBrandValorant.svg": "/portfolio_website/static/media/TablerBrandValorant.fe4151f3b86ae53f1c3bddb9420dc490.svg",
+    "main.d40d9d13.css.map": "/portfolio_website/static/css/main.d40d9d13.css.map",
+    "main.a82ced01.js.map": "/portfolio_website/static/js/main.a82ced01.js.map",
+    "787.749b4a44.chunk.js.map": "/portfolio_website/static/js/787.749b4a44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d40d9d13.css",
+    "static/js/main.a82ced01.js"
+  ]
+}
