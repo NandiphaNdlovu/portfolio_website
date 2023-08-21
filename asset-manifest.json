@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_website/static/css/main.67f68075.css",
-    "main.js": "/portfolio_website/static/js/main.a82ced01.js",
+    "main.js": "/portfolio_website/static/js/main.b071672e.js",
     "static/js/787.749b4a44.chunk.js": "/portfolio_website/static/js/787.749b4a44.chunk.js",
     "static/media/banner-bg.png": "/portfolio_website/static/media/banner-bg.cc1273af450504afe755.png",
     "static/media/Wave.svg": "/portfolio_website/static/media/Wave.1671a8b59c99b640c18434c20240832b.svg",
@@ -33,11 +33,11 @@
     "static/media/MdiMinecraft.svg": "/portfolio_website/static/media/MdiMinecraft.ad12ae4ae045690a9a0f63739b3ab475.svg",
     "static/media/TablerBrandValorant.svg": "/portfolio_website/static/media/TablerBrandValorant.fe4151f3b86ae53f1c3bddb9420dc490.svg",
     "main.67f68075.css.map": "/portfolio_website/static/css/main.67f68075.css.map",
-    "main.a82ced01.js.map": "/portfolio_website/static/js/main.a82ced01.js.map",
+    "main.b071672e.js.map": "/portfolio_website/static/js/main.b071672e.js.map",
     "787.749b4a44.chunk.js.map": "/portfolio_website/static/js/787.749b4a44.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67f68075.css",
-    "static/js/main.a82ced01.js"
+    "static/js/main.b071672e.js"
   ]
 }
