@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/Wave.svg";
 import { ArrowRightCircle, Download } from 'react-bootstrap-icons';
 import 'animate.css';
-import cvDownload from '../assets/data/CV_Cover-Letter.pdf';
+import cvDownload from '../assets/data/CV_Cover-Letter_QRCode.pdf';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
@@ -71,7 +71,7 @@ export const Banner = () => {
                   */}
                   <a
                     href={cvDownload}
-                    download='CV_Cover-Letter'
+                    download='CV_Cover-Letter_QRCode'
                     target="_blank"
                     rel="noopener noreferrer"
                   >
