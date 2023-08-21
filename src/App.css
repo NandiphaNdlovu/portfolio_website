@@ -111,7 +111,7 @@ nav.navbar {
   padding: 18px 0;
   position: fixed;
   background-image: url('./assets/img/banner-bg.png');
-  width: 100%;
+  width: 100vw;
   top: 0;
   z-index: 9999999;
   transition: 0.32 ease-in-out;
@@ -525,10 +525,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /*Footer*/
 .footer {
   background-image: url('./assets/img/footer-bg.png');
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vw;
   bottom: 0;
 }
 
