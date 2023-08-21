@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/Wave.svg";
-import { ArrowRightCircle,Download } from 'react-bootstrap-icons';
+import { ArrowRightCircle, Download } from 'react-bootstrap-icons';
 import 'animate.css';
+import cvDownload from '../assets/data/CV.pdf';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
@@ -68,7 +69,14 @@ export const Banner = () => {
                   {/*
                   <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
                   */}
-                  <a href="../assets/data/CV.pdf" download><button onClick={() => console.log('download')} href="../assets/data/Curriculum_Vitae.pdf" download>Download CV<Download size={25} /></button></a>
+                  <a
+                    href={cvDownload}
+                    download='CV'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button onClick={() => console.log('download')}>Download CV<Download size={25} /></button>
+                  </a>
                 </div>}
             </TrackVisibility>
           </Col>
