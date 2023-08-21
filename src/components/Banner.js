@@ -68,7 +68,7 @@ export const Banner = () => {
                   {/*
                   <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
                   */}
-                  <a href="../assets/data/Curriculum Vitae.pdf" download><button onClick={() => console.log('download')} href="../assets/data/Curriculum_Vitae.pdf" download>Download CV<Download size={25} /></button></a>
+                  <a href="../assets/data/CV.pdf" download><button onClick={() => console.log('download')} href="../assets/data/Curriculum_Vitae.pdf" download>Download CV<Download size={25} /></button></a>
                 </div>}
             </TrackVisibility>
           </Col>
