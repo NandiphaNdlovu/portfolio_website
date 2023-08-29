@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio_website/static/css/main.6ebc58f7.css",
+    "main.css": "/portfolio_website/static/css/main.899e990f.css",
     "main.js": "/portfolio_website/static/js/main.4e0e06c2.js",
     "static/js/787.749b4a44.chunk.js": "/portfolio_website/static/js/787.749b4a44.chunk.js",
     "static/media/CV_Cover-Letter_QRCode.pdf": "/portfolio_website/static/media/CV_Cover-Letter_QRCode.b5a5438308452dd88284.pdf",
@@ -33,12 +33,12 @@
     "static/media/DeviconWindows8.svg": "/portfolio_website/static/media/DeviconWindows8.b7d329b3a8b06e07ea8cdee121736a97.svg",
     "static/media/MdiMinecraft.svg": "/portfolio_website/static/media/MdiMinecraft.ad12ae4ae045690a9a0f63739b3ab475.svg",
     "static/media/TablerBrandValorant.svg": "/portfolio_website/static/media/TablerBrandValorant.fe4151f3b86ae53f1c3bddb9420dc490.svg",
-    "main.6ebc58f7.css.map": "/portfolio_website/static/css/main.6ebc58f7.css.map",
+    "main.899e990f.css.map": "/portfolio_website/static/css/main.899e990f.css.map",
     "main.4e0e06c2.js.map": "/portfolio_website/static/js/main.4e0e06c2.js.map",
     "787.749b4a44.chunk.js.map": "/portfolio_website/static/js/787.749b4a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ebc58f7.css",
+    "static/css/main.899e990f.css",
     "static/js/main.4e0e06c2.js"
   ]
 }
