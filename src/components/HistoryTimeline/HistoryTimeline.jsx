@@ -14,7 +14,6 @@ import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import BadgeIcon from "@mui/icons-material/Badge";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import { Cursor } from "react-bootstrap-icons";
 
 export function HistoryTimeline() {
   return (
