@@ -1,25 +1,25 @@
 /*import custom fonts*/
 @font-face {
   font-family: Centra;
-  src: url('./assets/font/CentraNo2-Bold.ttf');
+  src: url("./assets/font/CentraNo2-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: Centra;
-  src: url('./assets/font//CentraNo2-Medium.ttf');
+  src: url("./assets/font//CentraNo2-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: Centra;
-  src: url('./assets/font/CentraNo2-Book.ttf');
+  src: url("./assets/font/CentraNo2-Book.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: bubblegums;
-  src: url('./assets/font/06384_BUBBLEGU.ttf');
+  src: url("./assets/font/06384_BUBBLEGU.ttf");
   font-weight: 300;
 }
 
@@ -36,7 +36,7 @@ html {
   scroll-padding-top: 75px;
 }
 
-:root{
+:root {
   align-items: center;
 }
 
@@ -45,10 +45,14 @@ body {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #121212 !important;
+  background-color: #e0c7f9 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: "Centra", sans-serif !important;
 }
+
+/* .App{
+  background-color: #e0c7f9;
+} */
 
 h1,
 h2,
@@ -92,7 +96,7 @@ select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
+@media (min-width: 1700px) {
   main .container {
     max-width: 100%;
     padding: 0 150px;
@@ -111,7 +115,7 @@ p.danger {
 nav.navbar {
   padding: 18px 0;
   position: fixed;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url("./assets/img/banner-bg.png");
   width: 100vw;
   top: 0;
   z-index: 9999999;
@@ -126,7 +130,7 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
   position: left;
   width: 10%;
-  font-family: 'bubblegums', 'Helvetica Neue';
+  font-family: "bubblegums", "Helvetica Neue";
   color: #c58aec;
 }
 
@@ -191,7 +195,8 @@ span.navbar-text {
 }
 
 .social-icon a:hover img {
-  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
 .navbar-text button {
@@ -266,7 +271,7 @@ nav.navbar .navbar-toggler-icon:before {
   background-color: #fff;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
   z-index: 2;
   transition: all 300ms linear;
 }
@@ -315,7 +320,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner h1 {
-  font-family: 'bubblegums', 'Helvetica Neue' !important;
+  font-family: "bubblegums", "Helvetica Neue" !important;
   font-size: 30px;
   font-weight: 700;
   color: #c58aec;
@@ -325,13 +330,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner p {
-  color: #B8B8B8;
+  color: #b8b8b8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
-.banner a{
+.banner a {
   text-decoration: none !important;
 }
 .banner button {
@@ -377,30 +382,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-.txt-rotate>.wrap {
+.txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
 /*Skills*/
-.skills{
+.skills {
   margin-top: 0;
   padding: 200px 0 150px 0;
   background-size: cover;
   display: grid;
-  justify-content: center center!important;
+  justify-content: center center !important;
   align-items: center;
   text-align: center !important;
   border-radius: 20px !important;
 }
-.skills h1{
-  font-family: 'bubblegums', 'Helvetica Neue' !important;
+.skills h1 {
+  font-family: "bubblegums", "Helvetica Neue" !important;
   color: #c58aec;
-  justify-self: center ;
+  justify-self: center;
 }
 .skills-icon {
   display: inline-block;
   margin: 10px 0 10px 0;
 }
-.skills-icon img{
+.skills-icon img {
   display: inline-block;
   margin: 5px;
 }
@@ -420,7 +425,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(29, 23, 41, 0.753); /* Adjust background color and opacity */
+  background-color: rgba(
+    29,
+    23,
+    41,
+    0.753
+  ); /* Adjust background color and opacity */
   color: white;
   z-index: 1;
   padding: 10px;
@@ -439,18 +449,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 20px;
   /*background-image: url('./assets/img/banner-bg.png');*/
   display: block;
-  justify-content: center center!important;
+  justify-content: center center !important;
   text-align: center !important;
 }
-.projects h1{
-  font-family: 'bubblegums', 'Helvetica Neue' !important;
+.projects h1 {
+  font-family: "bubblegums", "Helvetica Neue" !important;
   color: #c58aec;
-  justify-self: center ;
+  justify-self: center;
 }
-.project{
+.project {
   display: flex;
 }
-.project-items{
+.project-items {
   text-align: left;
   display: flex;
   margin: 10px;
@@ -459,10 +469,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow-y: auto;
 }
 .project button {
-  font-family: 'bubblegums', 'Helvetica Neue' !important;
+  font-family: "bubblegums", "Helvetica Neue" !important;
   color: #c58aec;
 }
-.top-close{
+.top-close {
   text-align: right !important;
 }
 .overlay {
@@ -479,7 +489,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .selected-details {
   border: solid #c58aec !important;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
   z-index: 10000;
   /* Place the details above the overlay */
   /* ... add your styling for the selected details here ... */
@@ -489,22 +503,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow-x: auto;
   padding: 10px;
   border-radius: 20px;
-
 }
-.selected-details div{
+.selected-details div {
   display: grid !important;
 }
-.selected-details div span{
+.selected-details div span {
   margin-bottom: 10px;
   display: flex !important;
   justify-content: center !important;
 }
-.selected-details div span a{
+.selected-details div span a {
   text-decoration: none !important;
   color: #2f95bd;
   margin: 5px;
 }
-.project li{
+.project li {
   list-style-type: none;
   padding: 20px;
   border-radius: 20px;
@@ -516,7 +529,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -webkit-border-radius: 1ex;
 }
 ::-webkit-scrollbar-thumb {
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url("./assets/img/banner-bg.png");
   -webkit-border-radius: 1ex;
 }
 
@@ -525,7 +538,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 /*Footer*/
 .footer {
-  background-image: url('./assets/img/footer-bg.png');
+  background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -540,7 +553,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 10px;
-  color: #B8B8B8;
   letter-spacing: 0.5px;
 }
 
