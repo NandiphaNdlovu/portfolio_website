@@ -27,7 +27,7 @@ export function HistoryTimeline() {
           variant="body2"
           color="white"
         >
-          2015 - 2019
+          2019
         </TimelineOppositeContent>
 
         <TimelineSeparator>
@@ -49,6 +49,39 @@ export function HistoryTimeline() {
             High School
           </Typography>
           <Typography>Matriculated 2019</Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      {/* DataBox */}
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: "auto 0" }}
+          align="right"
+          variant="body2"
+          color="white"
+        >
+          2020
+        </TimelineOppositeContent>
+
+        <TimelineSeparator>
+          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+          <Tooltip title={"DataBox"} placement="auto">
+            <TimelineDot
+              color="secondary"
+              variant="outlined"
+              style={{ cursor: "pointer" }}
+            >
+              <LocalLibraryIcon />
+            </TimelineDot>
+          </Tooltip>
+          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+        </TimelineSeparator>
+
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography variant="h6" component="span">
+            DataBox
+          </Typography>
+          <Typography>Volunteer Database Assistant</Typography>
         </TimelineContent>
       </TimelineItem>
 
@@ -78,7 +111,7 @@ export function HistoryTimeline() {
           <Typography variant="h6" component="span">
             University
           </Typography>
-          <Typography>Belgium Campus Itversity</Typography>
+          <Typography>Belgium Campus ItVersity</Typography>
         </TimelineContent>
       </TimelineItem>
 
@@ -204,7 +237,7 @@ export function HistoryTimeline() {
             Employer
           </Typography>
           <Typography color="secondary">
-            Junior Software Engineer at Altron Healthtech
+            Software Engineer at Altron Healthtech
           </Typography>
         </TimelineContent>
       </TimelineItem>

@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/Wave.svg";
 import { Download } from "react-bootstrap-icons";
 import "animate.css";
-import cvDownload from "../assets/data/Nandipha_Ndlovu_CV-2025.pdf";
+import cvDownload from "../assets/data/NandiphaBianca_Ndlovu-CV.pdf";
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
@@ -75,15 +75,26 @@ export const Banner = () => {
                   }
                 >
                   <p>
-                    Greetings! 🚀 I'm a third-year computer science student at
-                    Belgium Campus iTversity, diving deep into the enchanting
-                    realm of software engineering. From weaving frontend
-                    fairytales to conjuring backend spells and even crafting
-                    full-stack adventures, I'm all about bringing digital dreams
-                    to life. When I'm not coding up a storm, you'll find me
-                    cozily immersed in games like Coral Island and Grounded –
-                    because even tech wizards need their pixelated escapes!
-                    🎮🌱✨
+                    Hi! 👋 I'm a Full-Stack Software Developer with a Bachelor
+                    of Computing (Honours) from Belgium Campus iTversity. I
+                    enjoy building scalable, user-focused applications and have
+                    professional experience developing React frontends, ASP.NET
+                    Core microservices, SQL Server databases, and AI-assisted
+                    solutions. During my time at Altron HealthTech, I worked on
+                    business-critical applications, automated manual SQL-driven
+                    processes, built reusable frontend components, and developed
+                    backend services that improved internal workflows.
+                  </p>
+                  <p>
+                    I enjoy solving complex problems, learning new technologies,
+                    and building software that has a meaningful impact. I'm
+                    particularly interested in full-stack development, cloud
+                    technologies, and AI-powered applications, and I'm
+                    continuously expanding my skills in modern frameworks and
+                    best practices. Outside of programming, you'll usually find
+                    me knitting, building Minecraft data packs, or relaxing with
+                    games like Coral Island and Grounded, because every
+                    developer needs a creative outlet. 🎮🧶
                   </p>
                   {/*
                   <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
@@ -98,7 +109,7 @@ export const Banner = () => {
                       onClick={
                         () =>
                           console.log(
-                            "download CV"
+                            "download CV",
                           ) /* Create a toast to inform of download */
                       }
                     >
