@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, NavbarBrand } from "react-bootstrap";
 
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
-
-export const NavigationBar = () => {
-  return <div></div>;
-};
+import { Icon } from "../atoms/Icon/Icon.tsx";
+import { IconType } from "../atoms/Icon/icon.ts";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home"); //initially set to home
@@ -28,12 +26,11 @@ export const NavBar = () => {
     setActiveLink(value);
   };
   return (
-    //paste bootstrap nav bar
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home" className="logo">
+        <NavbarBrand href="#home" className="logo">
           Portfolio
-        </Navbar.Brand>
+        </NavbarBrand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
