@@ -14,6 +14,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { IconButtonElement } from "../Button/IconButton/IconButton.tsx";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -77,11 +78,7 @@ export function CardElement({
     <Card className="max-w-64 min-w-64 !bg-white/10 rounded-2xl !shadow-[0_2px_5px_#420D4B]">
       <CardHeader
         avatar={
-          avatar && (
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              R
-            </Avatar>
-          )
+          avatar && <IconButtonElement tooltipTitle={title} icon={avatar} />
         }
         action={
           action && (

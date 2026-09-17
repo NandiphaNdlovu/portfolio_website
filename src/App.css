@@ -1,0 +1,73 @@
+.scoop-tab {
+  position: relative !important;
+  overflow: visible !important;
+
+  padding: 12px 28px !important;
+  min-width: auto !important;
+  min-height: auto !important;
+
+  color: white !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+
+  border-radius: 16px 16px 0 0 !important;
+
+  backdrop-filter: blur(12px);
+}
+
+/* LEFT */
+.scoop-tab::before {
+  content: "" !important;
+  position: absolute !important;
+
+  bottom: 0 !important;
+  left: -16px !important;
+
+  width: 16px !important;
+  height: 16px !important;
+
+  background: rgba(255, 255, 255, 0.5) !important;
+
+  mask-image: radial-gradient(
+    circle at 0 0,
+    transparent 16px,
+    black 16.5px
+  ) !important;
+
+  -webkit-mask-image: radial-gradient(
+    circle at 0 0,
+    transparent 16px,
+    black 16.5px
+  ) !important;
+}
+
+/* RIGHT */
+.scoop-tab::after {
+  content: "" !important;
+  position: absolute !important;
+
+  bottom: 0 !important;
+  right: -16px !important;
+
+  width: 16px !important;
+  height: 16px !important;
+
+  background: rgba(255, 255, 255, 0.5) !important;
+
+  mask-image: radial-gradient(
+    circle at 100% 0,
+    transparent 16px,
+    black 16.5px
+  ) !important;
+
+  -webkit-mask-image: radial-gradient(
+    circle at 100% 0,
+    transparent 16px,
+    black 16.5px
+  ) !important;
+}
+
+#page {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 0 16px 16px 16px !important;
+  height: 100%;
+}

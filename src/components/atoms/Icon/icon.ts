@@ -30,6 +30,16 @@ export enum IconTypeMUI {
   FileDownloadOutlined = "FileDownloadOutlined ",
   MenuOpenOutlined = "MenuOpenOutlined",
   MenuOutlined = "MenuOutlined",
+  Code = "Code",
+  Psychology = "Psychology",
+  Web = "Web",
+  Storage = "Storage",
+  DataObject = "DataObject",
+  BugReport = "BugReport",
+  CloudUpload = "CloudUpload",
+  Groups = "Groups",
+  School = "School",
+  AutoAwesome = "AutoAwesome",
 }
 
 export enum IconSize {

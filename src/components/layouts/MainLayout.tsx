@@ -5,24 +5,26 @@ import { FooterElement } from "../organisms/FooterBar/FooterElement.tsx";
 
 export function MainLayout() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex max-h-screen">
       {/* Side Drawer */}
       <SideDrawer />
 
       {/* Main application */}
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="flex min-w-0 flex-1 max-h-screen flex-col">
         {/* Navigation */}
-        <header className="sticky top-0 !bg-white/10 z-50 !shadow-[0_2px_5px_#420D4B]">
+        <header className="sticky top-0 !bg-white/30 z-50 backdrop-blur-md">
           <NavBarElement />
         </header>
 
         {/* Body */}
-        <main className="flex-1 p-2 ">
+        <main className="flex-1 p-2 h-full">
           <Outlet />
         </main>
 
         {/* Footer */}
-        <FooterElement />
+        <footer className="!bg-white/30 z-50 backdrop-blur-md">
+          <FooterElement />
+        </footer>
       </div>
     </div>
   );

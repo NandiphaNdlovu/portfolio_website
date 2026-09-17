@@ -30,6 +30,16 @@ import {
   FileDownloadOutlined,
   MenuOpenOutlined,
   MenuOutlined,
+  Code,
+  Psychology,
+  Web,
+  Storage,
+  DataObject,
+  BugReport,
+  CloudUpload,
+  Groups,
+  School,
+  AutoAwesome,
 } from "@mui/icons-material";
 
 import type {
@@ -88,6 +98,16 @@ export const MuiIcons: Record<IconTypeMUI, MuiIconType> = {
   [IconTypeMUI.FileDownloadOutlined]: FileDownloadOutlined,
   [IconTypeMUI.MenuOutlined]: MenuOutlined,
   [IconTypeMUI.MenuOpenOutlined]: MenuOpenOutlined,
+  [IconTypeMUI.Code]: Code,
+  [IconTypeMUI.Psychology]: Psychology,
+  [IconTypeMUI.Web]: Web,
+  [IconTypeMUI.Storage]: Storage,
+  [IconTypeMUI.DataObject]: DataObject,
+  [IconTypeMUI.BugReport]: BugReport,
+  [IconTypeMUI.CloudUpload]: CloudUpload,
+  [IconTypeMUI.Groups]: Groups,
+  [IconTypeMUI.School]: School,
+  [IconTypeMUI.AutoAwesome]: AutoAwesome,
 };
 
 export interface IconProps {

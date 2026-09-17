@@ -1,17 +1,12 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Tooltip from "@mui/material/Tooltip";
 import AdbIcon from "@mui/icons-material/Adb";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Icon } from "../../atoms/Icon/Icon.tsx";
 import { IconTypeMUI } from "../../atoms/Icon/icon.ts";
 import { Box } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import { IconButtonElement } from "../../atoms/Button/IconButton/IconButton.tsx";
@@ -20,28 +15,24 @@ const pages = ["GitHub", "LinkedIn", "Download CV"];
 
 export function NavBarElement() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  // const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
   return (
-    <AppBar
-      position="relative"
-      className="!shadow-none"
-      color="transparent"
-    >
+    <AppBar position="relative" className="!shadow-none" color="transparent">
       <Container maxWidth="xl" className="">
         <Toolbar disableGutters className="flex flex-row">
           {/* Large Screens - title */}
@@ -101,16 +92,6 @@ export function NavBarElement() {
             />
           </div>
           <Box className="flex flex-grow md:hidden justify-end ">
-            {/* <IconButton
-              size="large"
-              aria-label="menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton> */}
             <IconButtonElement
               onClick={handleOpenNavMenu}
               icon={<Icon iconName={IconTypeMUI.MenuOutlined} />}

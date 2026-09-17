@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   Drawer,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
@@ -109,20 +108,11 @@ export function SideDrawer() {
             <></>
           )}
           {open ? (
-            // <IconButton
-            //   className="transition-all duration-300 hover:bg-purple-500/10 hover:text-purple-400 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]"
-            //   onClick={toggleDrawer}
-            // >
-            //   <Icon iconName={IconType.ChevronDoubleLeftIcon} />
-            // </IconButton>
             <IconButtonElement
               onClick={toggleDrawer}
               icon={<Icon iconName={IconType.ChevronDoubleLeftIcon} />}
             />
           ) : (
-            // <IconButton onClick={toggleDrawer}>
-            //   <Icon iconName={IconType.ChevronDoubleRightIcon} />
-            // </IconButton>
             <IconButtonElement
               onClick={toggleDrawer}
               icon={<Icon iconName={IconType.ChevronDoubleRightIcon} />}
