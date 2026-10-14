@@ -21,26 +21,25 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import {
-  DeleteOutline,
-  Diversity1Outlined,
-  Diversity2Outlined,
-  GitHub,
-  LinkedIn,
-  FileDownloadOutlined,
-  MenuOpenOutlined,
-  MenuOutlined,
-  Code,
-  Psychology,
-  Web,
-  Storage,
-  DataObject,
-  BugReport,
-  CloudUpload,
-  Groups,
-  School,
-  AutoAwesome,
-} from "@mui/icons-material";
+// Imported by path so only the icons we use are pulled into the bundle.
+import DeleteOutline from "@mui/icons-material/DeleteOutline";
+import Diversity1Outlined from "@mui/icons-material/Diversity1Outlined";
+import Diversity2Outlined from "@mui/icons-material/Diversity2Outlined";
+import GitHub from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import FileDownloadOutlined from "@mui/icons-material/FileDownloadOutlined";
+import MenuOpenOutlined from "@mui/icons-material/MenuOpenOutlined";
+import MenuOutlined from "@mui/icons-material/MenuOutlined";
+import Code from "@mui/icons-material/Code";
+import Psychology from "@mui/icons-material/Psychology";
+import Web from "@mui/icons-material/Web";
+import Storage from "@mui/icons-material/Storage";
+import DataObject from "@mui/icons-material/DataObject";
+import BugReport from "@mui/icons-material/BugReport";
+import CloudUpload from "@mui/icons-material/CloudUpload";
+import Groups from "@mui/icons-material/Groups";
+import School from "@mui/icons-material/School";
+import AutoAwesome from "@mui/icons-material/AutoAwesome";
 
 import type {
   ForwardRefExoticComponent,

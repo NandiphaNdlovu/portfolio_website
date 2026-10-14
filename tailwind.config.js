@@ -1,8 +1,22 @@
+const tokens = require("./src/theme/tokens.js");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./public/index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        accent: {
+          DEFAULT: tokens.accent,
+          strong: tokens.accentStrong,
+        },
+        glass: {
+          DEFAULT: tokens.glass,
+          soft: tokens.glassSoft,
+          faint: tokens.glassFaint,
+        },
+      },
+    },
   },
   plugins: [],
 };

@@ -1,7 +1,15 @@
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "../components/pages/HomePage/HomePage.tsx";
 import { homeRoute, projectsRoute } from "./routes.ts";
 import { MainLayout } from "../components/layouts/MainLayout.tsx";
+
+// Pages are code-split so the first load only ships the shell + the page being viewed.
+const HomePage = lazy(
+  () => import("../components/pages/HomePage/HomePage.tsx"),
+);
+const ProjectsPage = lazy(
+  () => import("../components/pages/ProjectsPage/ProjectsPage.tsx"),
+);
 
 interface RouteItems {
   path: string;
@@ -11,7 +19,7 @@ interface RouteItems {
 
 export const portfolioRoutes: RouteItems[] = [
   { path: homeRoute, element: <HomePage /> },
-  { path: projectsRoute, element: <>Project</>, breadcrumb: "project" },
+  { path: projectsRoute, element: <ProjectsPage />, breadcrumb: "project" },
 ];
 
 export function StaticRoutes() {
@@ -19,8 +27,14 @@ export function StaticRoutes() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         {portfolioRoutes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
+          <Route
+            key={route.path}
+            index={route.path === homeRoute}
+            path={route.path === homeRoute ? undefined : route.path}
+            element={route.element}
+          />
         ))}
+        <Route path="*" element={<HomePage />} />
       </Route>
     </Routes>
   );

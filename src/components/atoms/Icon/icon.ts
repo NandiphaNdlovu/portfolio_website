@@ -27,7 +27,7 @@ export enum IconTypeMUI {
   Diversity2Outlined = "Diversity2Outlined",
   GitHub = "GitHub",
   LinkedIn = "LinkedIn",
-  FileDownloadOutlined = "FileDownloadOutlined ",
+  FileDownloadOutlined = "FileDownloadOutlined",
   MenuOpenOutlined = "MenuOpenOutlined",
   MenuOutlined = "MenuOutlined",
   Code = "Code",

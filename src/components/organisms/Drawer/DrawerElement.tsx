@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import {
   Drawer,
   List,
@@ -10,38 +11,83 @@ import {
 import { Icon } from "../../atoms/Icon/Icon.tsx";
 import { IconType, IconTypeMUI } from "../../atoms/Icon/icon.ts";
 import { IconButtonElement } from "../../atoms/Button/IconButton/IconButton.tsx";
+import { contactLink, profile } from "../../../data/profile.ts";
+import { homeRoute, projectsRoute } from "../../../routing/routes.ts";
 
 interface NavItem {
-  label?: string;
+  label: string;
   icon: React.ReactNode;
-  href?: string | null | undefined;
+  /** Internal route, rendered as a router link (highlighted when active). */
+  to?: string;
+  /** External/mailto link, rendered as a plain anchor. */
+  href?: string;
 }
 
 const navItems: NavItem[] = [
   {
     label: "Home",
     icon: <Icon iconName={IconType.HomeIcon} />,
-    href: "/",
+    to: homeRoute,
   },
   {
     label: "Projects",
     icon: <Icon iconName={IconType.Square3Stack3DIcon} />,
-    href: "projects",
+    to: projectsRoute,
   },
 ];
 
-const confItems: NavItem[] = [
-  {
-    label: "Settings",
-    icon: <Icon iconName={IconType.Cog6ToothIcon} />,
-    href: "/",
-  },
-  {
-    label: "Let's Talk",
-    icon: <Icon iconName={IconType.PaperAirplaneIcon} />,
-    href: "/",
-  },
-];
+const confItems: NavItem[] = contactLink
+  ? [
+      {
+        label: contactLink.label,
+        icon: <Icon iconName={contactLink.icon} />,
+        href: contactLink.href,
+      },
+    ]
+  : [];
+
+const COLLAPSED_WIDTH = 64;
+const EXPANDED_WIDTH = 224;
+
+function DrawerLinks({
+  items,
+  open,
+  bordered,
+}: {
+  items: NavItem[];
+  open: boolean;
+  bordered?: boolean;
+}) {
+  return (
+    <List className="flex flex-col justify-center p-2 md:block">
+      {items.map((item) => (
+        <ListItem
+          key={item.label}
+          disablePadding
+          className="mb-2 flex items-center justify-center"
+        >
+          <Tooltip title={!open ? item.label : ""} placement="right">
+            <ListItemButton
+              {...(item.to
+                ? { component: NavLink, to: item.to, end: true }
+                : { component: "a", href: item.href })}
+              aria-label={item.label}
+              className={`flex h-8 items-center justify-center rounded-lg px-3 py-3 [&.active]:bg-accent/20 [&.active]:text-accent-strong ${bordered ? "border" : ""}`}
+            >
+              <span
+                className={`flex shrink-0 items-center justify-center ${open ? "mr-3" : ""}`}
+              >
+                {item.icon}
+              </span>
+
+              {open && <span className="whitespace-nowrap">{item.label}</span>}
+            </ListItemButton>
+          </Tooltip>
+        </ListItem>
+      ))}
+    </List>
+  );
+}
 
 export function SideDrawer() {
   const [open, setOpen] = useState(false);
@@ -50,33 +96,44 @@ export function SideDrawer() {
     setOpen((prev) => !prev);
   };
 
+  const width = open ? EXPANDED_WIDTH : COLLAPSED_WIDTH;
+
   return (
     <aside
-      className={`relative flex h-screen shrink-0 flex-col overflow-hidden transition-[width] duration-300 ease-in-out ${open ? "w-56" : "w-16"}`}
+      className="sticky top-0 flex h-screen shrink-0 flex-col overflow-hidden transition-[width] duration-300 ease-in-out"
+      style={{ width }}
     >
       <Drawer
         variant="permanent"
         open={open}
-        className="shrink-0 flex justify-center items-center"
+        className="flex shrink-0 items-center justify-center"
         slotProps={{
           paper: {
-            className: `relative !bg-transparent flex flex-col h-screen overflow-hidden transition-[width] duration-300 ease-in-out ${open ? "w-56" : "w-16"}`,
+            sx: {
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              height: "100vh",
+              overflow: "hidden",
+              width,
+              transition: "width 300ms ease-in-out",
+            },
           },
         }}
       >
-        <div className="flex flex-row h-16 items-center justify-end border-b px-2 mx-2">
-          {open ? (
-            <div className="flex-1 flex gap-4 justify-center items-center">
+        <div className="mx-2 flex h-16 flex-row items-center justify-end border-b px-2">
+          {open && (
+            <div className="flex flex-1 items-center justify-center gap-4">
               <Icon
                 iconName={IconTypeMUI.Diversity2Outlined}
-                className="flex justify-start m-4"
+                className="m-4 flex justify-start"
               />
-              <span className="flex-1 flex flex-col">
+              <span className="flex flex-1 flex-col">
                 <Typography
                   variant="subtitle1"
                   noWrap
-                  component="a"
-                  href="/"
+                  component={Link}
+                  to={homeRoute}
                   sx={{
                     mr: 2,
                     fontFamily: "math",
@@ -85,13 +142,13 @@ export function SideDrawer() {
                     textDecoration: "none",
                   }}
                 >
-                  Software Developer
+                  {profile.title}
                 </Typography>
                 <Typography
                   variant="caption"
                   noWrap
-                  component="a"
-                  href="/"
+                  component={Link}
+                  to={homeRoute}
                   sx={{
                     mr: 2,
                     flexGrow: 1,
@@ -100,103 +157,35 @@ export function SideDrawer() {
                     textDecoration: "none",
                   }}
                 >
-                  Nandipha Ndlovu
+                  {profile.name}
                 </Typography>
               </span>
             </div>
-          ) : (
-            <></>
           )}
-          {open ? (
-            <IconButtonElement
-              onClick={toggleDrawer}
-              icon={<Icon iconName={IconType.ChevronDoubleLeftIcon} />}
-            />
-          ) : (
-            <IconButtonElement
-              onClick={toggleDrawer}
-              icon={<Icon iconName={IconType.ChevronDoubleRightIcon} />}
-            />
-          )}
+          <IconButtonElement
+            ariaLabel={open ? "Collapse sidebar" : "Expand sidebar"}
+            onClick={toggleDrawer}
+            icon={
+              <Icon
+                iconName={
+                  open
+                    ? IconType.ChevronDoubleLeftIcon
+                    : IconType.ChevronDoubleRightIcon
+                }
+              />
+            }
+          />
         </div>
 
-        <div className="flex flex-1 p-2 flex-col md:block">
-          <List className="p-2 flex flex-col justify-center md:block">
-            {navItems.map((item) => (
-              <ListItem
-                key={item.label}
-                disablePadding
-                className="flex justify-center items-center mb-2"
-              >
-                <Tooltip
-                  key={item.label}
-                  title={!open ? item.label : ""}
-                  placement="right"
-                >
-                  <ListItemButton
-                    key={item.label}
-                    href={item.href ?? "/"}
-                    onClick={(event) => {
-                      event.stopPropagation();
+        <nav aria-label="Main" className="flex flex-1 flex-col p-2 md:block">
+          <DrawerLinks items={navItems} open={open} />
+        </nav>
 
-                      // navigation here
-                    }}
-                    className={`flex h-8 justify-center items-center rounded-lg px-3 py-3 hover:bg-gray-100 `}
-                  >
-                    <span
-                      className={`flex shrink-0 items-center justify-center ${open ? "mr-3" : ""}`}
-                    >
-                      {item.icon}
-                    </span>
-
-                    {open && (
-                      <span className="whitespace-nowrap">{item.label}</span>
-                    )}
-                  </ListItemButton>
-                </Tooltip>
-              </ListItem>
-            ))}
-          </List>
-        </div>
-
-        <div className="flex border-t p-2 flex-col justify-center md:block">
-          <List className="p-2 flex flex-col justify-center md:block">
-            {confItems.map((item) => (
-              <ListItem
-                key={item.label}
-                disablePadding
-                className="flex justify-center items-center mb-2"
-              >
-                <Tooltip title={!open ? item.label : ""} placement="right">
-                  <ListItemButton
-                    className={`flex h-8 justify-center items-center rounded-lg px-3 py-3 border `}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                    key={item.label}
-                    href={item.href ?? "/"}
-                    onClick={(event) => {
-                      event.stopPropagation();
-
-                      // navigation here
-                    }}
-                  >
-                    <span
-                      className={`flex shrink-0 items-center justify-center ${open ? "mr-3" : ""}`}
-                    >
-                      {item.icon}
-                    </span>
-
-                    {open && (
-                      <span className="whitespace-nowrap">{item.label}</span>
-                    )}
-                  </ListItemButton>
-                </Tooltip>
-              </ListItem>
-            ))}
-          </List>
-        </div>
+        {confItems.length > 0 && (
+          <div className="flex flex-col justify-center border-t p-2 md:block">
+            <DrawerLinks items={confItems} open={open} bordered />
+          </div>
+        )}
       </Drawer>
     </aside>
   );
