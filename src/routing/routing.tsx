@@ -22,7 +22,7 @@ interface RouteItems {
 export const portfolioRoutes: RouteItems[] = [
   { path: homeRoute, element: <HomePage /> },
   { path: projectsRoute, element: <ProjectsPage />, breadcrumb: "project" },
-  { path: gameRoute, element: <GamePage />, breadcrumb: "game" },
+  { path: gameRoute, element: <GamePage />, breadcrumb: "games" },
 ];
 
 export function StaticRoutes() {
