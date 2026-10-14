@@ -7,6 +7,7 @@ const LOAD = { timeout: 10000 };
 
 beforeEach(() => {
   window.location.hash = "";
+  window.localStorage.clear();
 });
 
 test("renders the home page with its tabs", async () => {
@@ -70,4 +71,27 @@ test("navbar links are accessible and open safely", async () => {
   const github = await screen.findByRole("link", { name: "GitHub" }, LOAD);
   expect(github).toHaveAttribute("target", "_blank");
   expect(github).toHaveAttribute("rel", expect.stringContaining("noopener"));
+});
+
+test("the game page renders with its rewards locked", async () => {
+  window.location.hash = "#/game";
+  render(<App />);
+
+  expect(
+    await screen.findByRole("heading", { level: 1, name: /collect my details/i }, LOAD),
+  ).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /start/i })).toBeInTheDocument();
+  expect(screen.getByText(/collect 10 words/i)).toBeInTheDocument();
+  expect(screen.queryByRole("link", { name: /@/ })).not.toBeInTheDocument();
+});
+
+test("unlocked levels are remembered between visits", async () => {
+  window.localStorage.setItem("portfolio:game:level", "2");
+  window.location.hash = "#/game";
+  render(<App />);
+
+  expect(
+    await screen.findByRole("link", { name: /download my cv/i }, LOAD),
+  ).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /@/ })).toBeInTheDocument();
 });

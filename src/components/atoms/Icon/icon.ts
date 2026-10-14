@@ -19,6 +19,18 @@ export enum IconType {
   Cog6ToothIcon = "Cog6ToothIcon",
   PaperAirplaneIcon = "PaperAirplaneIcon",
   UserCircleIcon = "UserCircleIcon",
+  PuzzlePieceIcon = "PuzzlePieceIcon",
+  LockClosedIcon = "LockClosedIcon",
+  LockOpenIcon = "LockOpenIcon",
+  EnvelopeIcon = "EnvelopeIcon",
+  DocumentArrowDownIcon = "DocumentArrowDownIcon",
+  PlayIcon = "PlayIcon",
+  PauseIcon = "PauseIcon",
+  ArrowPathIcon = "ArrowPathIcon",
+  ArrowUpIcon = "ArrowUpIcon",
+  ArrowDownIcon = "ArrowDownIcon",
+  ArrowLeftIcon = "ArrowLeftIcon",
+  ArrowRightIcon = "ArrowRightIcon",
 }
 
 export enum IconTypeMUI {

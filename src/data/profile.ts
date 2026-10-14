@@ -1,5 +1,5 @@
 import cvUrl from "../assets/data/Nandipha_Ndlovu_CV-2025.pdf";
-import { IconType, IconTypeMUI } from "../components/atoms/Icon/icon.ts";
+import { IconTypeMUI } from "../components/atoms/Icon/icon.ts";
 
 export const profile = {
   name: "Nandipha Ndlovu",
@@ -9,18 +9,15 @@ contributing to project success. Known for collaborative teamwork and a result-d
 in dynamic environments. Skilled in several programming languages and adept at communicating
 technical concepts.`,
   github: "https://github.com/NandiphaNdlovu",
-  // TODO: add your LinkedIn profile URL and contact email. Links left empty are hidden.
-  linkedin: "",
-  email: "",
+  linkedin: "https://www.linkedin.com/in/nandipha-bianca-ndlovu-954310265?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+  email: "biameleng@icloud.com",
 };
 
 export interface ProfileLink {
   label: string;
-  icon: IconType | IconTypeMUI;
+  icon: IconTypeMUI;
   href: string;
-  /** Opens in a new tab with rel="noopener noreferrer". */
   external?: boolean;
-  /** Downloads the file instead of navigating. */
   download?: string;
 }
 
@@ -45,11 +42,3 @@ export const profileLinks: ProfileLink[] = [
     download: "Nandipha_Ndlovu_CV.pdf",
   },
 ].filter((link) => link.href);
-
-export const contactLink: ProfileLink | undefined = profile.email
-  ? {
-      label: "Let's Talk",
-      icon: IconType.PaperAirplaneIcon,
-      href: `mailto:${profile.email}`,
-    }
-  : undefined;

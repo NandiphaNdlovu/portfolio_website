@@ -19,6 +19,18 @@ import {
   Cog6ToothIcon,
   PaperAirplaneIcon,
   UserCircleIcon,
+  PuzzlePieceIcon,
+  LockClosedIcon,
+  LockOpenIcon,
+  EnvelopeIcon,
+  DocumentArrowDownIcon,
+  PlayIcon,
+  PauseIcon,
+  ArrowPathIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 
 // Imported by path so only the icons we use are pulled into the bundle.
@@ -86,6 +98,18 @@ export const HeroIcons: Record<IconType, SvgType> = {
   [IconType.Cog6ToothIcon]: Cog6ToothIcon,
   [IconType.PaperAirplaneIcon]: PaperAirplaneIcon,
   [IconType.UserCircleIcon]: UserCircleIcon,
+  [IconType.PuzzlePieceIcon]: PuzzlePieceIcon,
+  [IconType.LockClosedIcon]: LockClosedIcon,
+  [IconType.LockOpenIcon]: LockOpenIcon,
+  [IconType.EnvelopeIcon]: EnvelopeIcon,
+  [IconType.DocumentArrowDownIcon]: DocumentArrowDownIcon,
+  [IconType.PlayIcon]: PlayIcon,
+  [IconType.PauseIcon]: PauseIcon,
+  [IconType.ArrowPathIcon]: ArrowPathIcon,
+  [IconType.ArrowUpIcon]: ArrowUpIcon,
+  [IconType.ArrowDownIcon]: ArrowDownIcon,
+  [IconType.ArrowLeftIcon]: ArrowLeftIcon,
+  [IconType.ArrowRightIcon]: ArrowRightIcon,
 };
 
 export const MuiIcons: Record<IconTypeMUI, MuiIconType> = {

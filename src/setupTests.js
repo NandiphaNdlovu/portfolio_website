@@ -8,3 +8,6 @@ import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from "util";
 
 Object.assign(global, { TextEncoder, TextDecoder });
+
+// jsdom has no canvas implementation; make getContext a quiet no-op (the game guards for null).
+HTMLCanvasElement.prototype.getContext = () => null;

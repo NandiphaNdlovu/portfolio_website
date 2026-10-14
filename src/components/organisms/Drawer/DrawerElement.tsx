@@ -11,16 +11,14 @@ import {
 import { Icon } from "../../atoms/Icon/Icon.tsx";
 import { IconType, IconTypeMUI } from "../../atoms/Icon/icon.ts";
 import { IconButtonElement } from "../../atoms/Button/IconButton/IconButton.tsx";
-import { contactLink, profile } from "../../../data/profile.ts";
-import { homeRoute, projectsRoute } from "../../../routing/routes.ts";
+import { profile } from "../../../data/profile.ts";
+import { gameRoute, homeRoute, projectsRoute } from "../../../routing/routes.ts";
 
 interface NavItem {
   label: string;
   icon: React.ReactNode;
   /** Internal route, rendered as a router link (highlighted when active). */
-  to?: string;
-  /** External/mailto link, rendered as a plain anchor. */
-  href?: string;
+  to: string;
 }
 
 const navItems: NavItem[] = [
@@ -34,17 +32,12 @@ const navItems: NavItem[] = [
     icon: <Icon iconName={IconType.Square3Stack3DIcon} />,
     to: projectsRoute,
   },
+  {
+    label: "Game",
+    icon: <Icon iconName={IconType.PuzzlePieceIcon} />,
+    to: gameRoute,
+  },
 ];
-
-const confItems: NavItem[] = contactLink
-  ? [
-      {
-        label: contactLink.label,
-        icon: <Icon iconName={contactLink.icon} />,
-        href: contactLink.href,
-      },
-    ]
-  : [];
 
 const COLLAPSED_WIDTH = 64;
 const EXPANDED_WIDTH = 224;
@@ -52,11 +45,9 @@ const EXPANDED_WIDTH = 224;
 function DrawerLinks({
   items,
   open,
-  bordered,
 }: {
   items: NavItem[];
   open: boolean;
-  bordered?: boolean;
 }) {
   return (
     <List className="flex flex-col justify-center p-2 md:block">
@@ -68,11 +59,11 @@ function DrawerLinks({
         >
           <Tooltip title={!open ? item.label : ""} placement="right">
             <ListItemButton
-              {...(item.to
-                ? { component: NavLink, to: item.to, end: true }
-                : { component: "a", href: item.href })}
+              component={NavLink}
+              to={item.to}
+              end
               aria-label={item.label}
-              className={`flex h-8 items-center justify-center rounded-lg px-3 py-3 [&.active]:bg-accent/20 [&.active]:text-accent-strong ${bordered ? "border" : ""}`}
+              className={`flex h-8 items-center justify-center rounded-lg px-3 py-3 [&.active]:bg-accent/20 [&.active]:text-accent-strong`}
             >
               <span
                 className={`flex shrink-0 items-center justify-center ${open ? "mr-3" : ""}`}
@@ -180,12 +171,6 @@ export function SideDrawer() {
         <nav aria-label="Main" className="flex flex-1 flex-col p-2 md:block">
           <DrawerLinks items={navItems} open={open} />
         </nav>
-
-        {confItems.length > 0 && (
-          <div className="flex flex-col justify-center border-t p-2 md:block">
-            <DrawerLinks items={confItems} open={open} bordered />
-          </div>
-        )}
       </Drawer>
     </aside>
   );

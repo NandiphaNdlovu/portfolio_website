@@ -1,14 +1,16 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { homeRoute, projectsRoute } from "./routes.ts";
+import { gameRoute, homeRoute, projectsRoute } from "./routes.ts";
 import { MainLayout } from "../components/layouts/MainLayout.tsx";
 
-// Pages are code-split so the first load only ships the shell + the page being viewed.
 const HomePage = lazy(
   () => import("../components/pages/HomePage/HomePage.tsx"),
 );
 const ProjectsPage = lazy(
   () => import("../components/pages/ProjectsPage/ProjectsPage.tsx"),
+);
+const GamePage = lazy(
+  () => import("../components/pages/GamePage/GamePage.tsx"),
 );
 
 interface RouteItems {
@@ -20,6 +22,7 @@ interface RouteItems {
 export const portfolioRoutes: RouteItems[] = [
   { path: homeRoute, element: <HomePage /> },
   { path: projectsRoute, element: <ProjectsPage />, breadcrumb: "project" },
+  { path: gameRoute, element: <GamePage />, breadcrumb: "game" },
 ];
 
 export function StaticRoutes() {
